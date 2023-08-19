@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo "PROJECT_ID: $PROJECT_ID"
+    echo "BUCKET_NAME: $BUCKET_NAME"
+    echo "API_KEY: $API_KEY"    
+  substitutions:
+    _PROJECT_ID: my-project
+    _BUCKET_NAME: my-bucket
+    _API_KEY: my-api-key
